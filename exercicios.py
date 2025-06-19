@@ -24,10 +24,19 @@
 #     return resultado
 
 # 3. Contar Valores Únicos em uma Lista
-def qtde_valores_unicos(lista: list) -> int:
-    lista_unica: list = list(set(lista))
-    return lista_unica
+# def qtde_valores_unicos(lista: list) -> int:
+#     lista_unica: list = list(set(lista))
+#     return lista_unica
+# lista_transformada: list = qtde_valores_unicos([2, 3, 4, 4, 4])
+# print(f"Os numeros que compoe a lista sao: {lista_transformada}, com uma quantidade de {len(lista_transformada)} numeros.")
+# correcao ex. 3
+# def contar_valores_unicos(lista: list[int]) -> int:
+#     return len(set(lista))
 
-lista_transformada: list = qtde_valores_unicos([2, 3, 4, 4, 4])
+# 4. Converter Celsius para Fahrenheit em uma Lista
+def celsius_para_fahrenheit(celsius: float) -> float:
+    return (celsius * 9/5) + 32
 
-print(f"Os numeros que compoe a lista sao: {lista_transformada}, com uma quantidade de {len(lista_transformada)} numeros.")
+conversao: float = celsius_para_fahrenheit(25)
+
+print(f"F {conversao}")
