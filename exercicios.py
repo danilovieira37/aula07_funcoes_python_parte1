@@ -34,9 +34,22 @@
 #     return len(set(lista))
 
 # 4. Converter Celsius para Fahrenheit em uma Lista
-def celsius_para_fahrenheit(celsius: float) -> float:
-    return (celsius * 9/5) + 32
+# def celsius_para_fahrenheit(celsius: float) -> float:
+#     return (celsius * 9/5) + 32
+# conversao: float = celsius_para_fahrenheit(25)
+# print(f"F {conversao}")
+# correcao ex. 4
+# def celsius_para_fahrenheit(temperaturas_celsius: list[float]) -> list[float]:
+#     return [(9/5) * temp + 32 for temp in temperaturas_celsius]
 
-conversao: float = celsius_para_fahrenheit(25)
-
-print(f"F {conversao}")
+# 5. Calcular Desvio Padrão de uma Lista
+import statistics
+def calcular_desvio_padrao_de_uma_lista(lista_numeros: list[float]) -> float:
+    return round(statistics.stdev(lista_numeros), 2)
+desvio_padrao_calculado: float = calcular_desvio_padrao_de_uma_lista([10, 12, 23, 23, 16, 23, 21, 16])
+print(desvio_padrao_calculado)
+# correcao ex. 5
+def calcular_desvio_padrao(valores: List[float]) -> float:
+    media = sum(valores) / len(valores)
+    variancia = sum((x - media) ** 2 for x in valores) / len(valores)
+    return variancia ** 0.5
